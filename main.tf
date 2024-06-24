@@ -1,6 +1,7 @@
 resource "kubernetes_namespace" "this" {
   metadata {
-    name = var.name
+    annotations = var.annotation
+    labels      = var.labels
+    name        = var.name
   }
 }
-
